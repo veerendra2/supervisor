@@ -10,10 +10,9 @@ FROM ubuntu
 # Install Supervisor.
 RUN \
   apt-get update && \
-  apt-get install -y supervisor
-  
-#rm -rf /var/lib/apt/lists/* && \
-#sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
+  apt-get install -y supervisor && \
+  rm -rf /var/lib/apt/lists/* && \
+  sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 # Define mountable directories.
 VOLUME ["/etc/supervisor/conf.d"]
