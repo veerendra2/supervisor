@@ -6,3 +6,6 @@ This repository contains **Dockerfile** of [Supervisor](http://supervisord.org/)
 
 ### Pull the image
 `docker pull veerendrav2/supervisor`
+
+### Run
+`docker run -d -it --name supervisor veerendrav2/supervisor`
